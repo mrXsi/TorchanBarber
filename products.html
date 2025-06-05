@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css" rel="stylesheet" type="text/css">
+    <title>محصولات</title>
+</head>
+<style>
+        body {
+    font-family: Vazir, sans-serif;
+    }
+    body,html{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+    body{
+       background:linear-gradient(90deg,#052750,#093c7a,#052750); 
+    }
+    div {
+        display: flex;
+        flex-direction: column;
+    }
+    .hed1{
+        font-size: 1.4rem;
+        color: white;
+        animation: border .5s ease forwards;
+        border-bottom: 1px solid white;
+        width: 150px;
+        padding-left: 10px;
+    }
+    @keyframes border {
+        0%{
+            opacity: 0;
+            transform: translateX(0px);
+        }
+        100%{
+            opacity: 1;
+            transform: translateX(115px);
+        }
+    }
+    .hed2{
+        font-size: 1.2rem;
+        color: rgb(217, 255, 0);
+        position: relative;left: 10.1rem;
+        width: 100px;
+    }
+    .products{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap:50px;
+        max-width: 300px; 
+        margin: auto;
+        flex-direction: row;
+    }
+    .pricing img {
+        height: 200px;
+        width: 100%;
+        display: block;
+        border-radius: 8px;
+        border:1px solid rgba(255, 255, 255,0.4) ;
+        filter: drop-shadow(0px 2px 5px rgb(0, 0, 0));
+        transition: all .3s ease;
+    }
+    .pricing img:hover{
+        border: 1px solid rgb(0, 0, 0);
+        filter: drop-shadow(0px 2px 4px rgb(0, 0, 0));
+        animation: torn .5s ease-in forwards;
+    }
+    @keyframes torn {
+        0%{
+            opacity: 1;
+            transform: rotateY(180deg)translateY(0px);
+        }
+        100%{
+            opacity: 1;
+            transform: rotateY(360deg)translateY(-15px);
+        }
+    }
+    .pricing p{
+        font-size: .7rem;
+        color: white;
+        align-self: center;
+    }
+    .pricing h4{
+        font-size: .95rem;
+        color: rgb(255, 166, 0);
+        align-self: center;
+        position: relative;bottom: 20px;
+        border-bottom: 1px solid ;
+    }
+</style>
+<body>
+    <header>
+        <h1 class="hed1">
+            فروشگاه تورچان
+        </h1>
+    </header>
+    <section>
+        <h2 class="hed2">محصولات</h2>
+    </section>
+    <div class="products">
+        <div class="pricing">
+            <img src="https://i.postimg.cc/fRYHzt6L/item2.jpg">
+            <p>شامپوی ضد ریزش مو</p>
+            <h4>قیمت 10.000 تومان</h4>
+        </div>
+        <div class="pricing">
+            <img src="https://i.postimg.cc/fRYHzt6L/item2.jpg">
+            <p>شامپوی ضد ریزش مو</p>
+            <h4>قیمت 10.000 تومان</h4>
+        </div>
+        <div class="pricing">
+            <img src="https://i.postimg.cc/fRYHzt6L/item2.jpg">
+            <p>شامپوی ضد ریزش مو</p>
+            <h4>قیمت 10.000 تومان</h4>
+        </div>
+        <div class="pricing">
+            <img src="https://i.postimg.cc/fRYHzt6L/item2.jpg">
+            <p>شامپوی ضد ریزش مو</p>
+            <h4>قیمت 10.000 تومان</h4>
+        </div>
+        <div class="pricing">
+            <img src="https://i.postimg.cc/fRYHzt6L/item2.jpg">
+            <p>شامپوی ضد ریزش مو</p>
+            <h4>قیمت 10.000 تومان</h4>
+        </div>
+        <div class="pricing">
+            <img src="https://i.postimg.cc/fRYHzt6L/item2.jpg">
+            <p>شامپوی ضد ریزش مو</p>
+            <h4>قیمت 10.000 تومان</h4>
+        </div>
+        <div class="pricing">
+            <img src="https://i.postimg.cc/fRYHzt6L/item2.jpg">
+            <p>شامپوی ضد ریزش مو</p>
+            <h4>قیمت 10.000 تومان</h4>
+        </div>
+        <div class="pricing">
+            <img src="https://i.postimg.cc/fRYHzt6L/item2.jpg">
+            <p>شامپوی ضد ریزش مو</p>
+            <h4>قیمت 10.000 تومان</h4>
+        </div>
+        <div class="pricing">
+            <img src="https://i.postimg.cc/fRYHzt6L/item2.jpg">
+            <p>شامپوی ضد ریزش مو</p>
+            <h4>قیمت 10.000 تومان</h4>
+        </div>
+        <div class="pricing">
+            <img src="https://i.postimg.cc/fRYHzt6L/item2.jpg">
+            <p>شامپوی ضد ریزش مو</p>
+            <h4>قیمت 10.000 تومان</h4>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.pricing img').forEach(img => {
+    img.addEventListener('click', () => {
+        img.classList.toggle('active');
+    });
+});
+    </script>
+</body>
+</html>
