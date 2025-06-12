@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css" rel="stylesheet" type="text/css">
+    <title>محصولات</title>
+</head>
+<style>
+    body {
+    font-family: Vazir, sans-serif;
+    }
+    body,html{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+    }
+    body{
+       background:linear-gradient(90deg,#052750,#093c7a,#052750); 
+    }
+    div {
+        display: flex;
+        flex-direction: column;
+    }
+    .back{
+        display: flex;
+        font-size: .8rem;
+        color: greenyellow;
+        text-decoration: none;
+        direction: rtl;
+        position: relative;top: 1rem; right: .8rem;
+    }
+    .back::after{
+        content: "🏠";
+    }
+    .back::before{
+        content:"↪️";
+    }
+    .hed1{
+        font-size: 1.4rem;
+        color: white;
+        border-bottom: 1px solid white;
+        width: 150px;
+        padding-left: 10px;
+        align-self: center;
+        text-align: center;
+        animation: hedline .5s ease forwards;
+    }
+    @keyframes hedline {
+        0%{
+            opacity: 1;
+            transform: translateX(0);
+        }
+        100%{
+            opacity: 1;
+            transform: translateX(110px);
+        }
+    }
+    .scroll-container {
+        width: 100%;
+        direction: ltr;
+        margin-top: 30px;
+        overflow-x: auto;
+        padding: 10px 0;
+        scrollbar-width: none;
+        -ms-perspective-origin-x: none;
+    }
+    .scroll-container::-webkit-scrollbar{
+        display: none;
+    }
+    .nav{
+        display: flex;
+        flex-direction: row;
+        gap:20px;
+    }
+    .nav img{
+        width: 140px;
+        height: 140px;
+        object-fit: cover;
+        max-width: none;
+        border-radius: 8px;
+        border:1px solid rgba(255, 255, 255,0.4) ;
+        filter: drop-shadow(0px 2px 5px rgb(0, 0, 0));
+        transition: all .5s ease;
+    }
+    .nav img:hover{
+       transform: translateY(-10px)scale(1.1);
+    }
+    .hed2{
+        margin-top: 20px;
+        font-size: 1.2rem;
+        color: rgb(217, 255, 0);
+        width: 100px;
+        text-align: center;
+        animation: hed2line .5s ease forwards;
+    }
+    @keyframes hed2line {
+        0%{
+            transform: translateX(0);
+        }
+        100%{
+            transform: translateX(140px);
+        }
+    }
+    .products{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap:40px;
+        max-width: 350px; 
+        margin: auto;
+        flex-direction: row;
+        margin-top: 20px;
+    }
+    .pricing{
+        width: calc(50% - 20PX);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .pricing img {
+
+        height: 200px;
+        width: 150px;
+        display: block;
+        border-radius: 8px;
+        border:1px solid rgba(255, 255, 255,0.4) ;
+        filter: drop-shadow(0px 2px 5px rgb(0, 0, 0));
+        transition: all .3s ease;
+    }
+    .pricing img:hover{
+        border: 1px solid rgb(0, 0, 0);
+        filter: drop-shadow(0px 2px 4px rgb(0, 0, 0));
+        animation: torn .5s ease-in forwards;
+    }
+    @keyframes torn {
+        0%{
+            opacity: 1;
+            transform: rotateY(180deg)translateY(0px);
+        }
+        100%{
+            opacity: 1;
+            transform: rotateY(360deg)translateY(-15px);
+        }
+    }
+    .pricing p{
+        font-size: .7rem;
+        color: white;
+        align-self: center;
+    }
+    .pricing h4{
+        font-size: .95rem;
+        color: rgb(255, 166, 0);
+        align-self: center;
+        position: relative;bottom: 20px;
+        border-bottom: 1px solid ;
+    }
+.nav-wrapper {
+    display: flex;
+    width: max-content;
+    animation: scroll-left linear infinite;
+    animation-duration: var(--duration, 50s);
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+</style>
+<body>
+    <header>
+        <a class="back" href="index.html">بازگشت به خانه</a>
+        <h1 class="hed1">
+            فروشگاه تورچان
+        </h1>
+    </header>
+    <div class="scroll-container">
+    <div class="nav-wrapper">
+    <div class="nav">
+        <img src="https://i.postimg.cc/W4YXtj9d/photo-1-2025-06-06-09-39-30.jpg">
+        <img src="https://i.postimg.cc/Y948WVVb/photo-6-2025-06-06-09-39-30.jpg">
+        <img src="https://i.postimg.cc/h4z3zzRc/photo-15-2025-06-06-09-39-30.jpg">
+        <img src="https://i.postimg.cc/63SjbwRk/photo-4-2025-06-06-09-39-30.jpg">
+        <img src="https://i.postimg.cc/W486qSth/photo-10-2025-06-06-09-39-30.jpg">
+        <img src="https://i.postimg.cc/dVmfsbPC/photo-2-2025-06-06-09-39-30.jpg">
+        <img src="https://i.postimg.cc/QtVYqVBg/photo-5-2025-06-06-09-39-30.jpg">
+        <img src="https://i.postimg.cc/h4z3zzRc/photo-15-2025-06-06-09-39-30.jpg">
+        <img src="https://i.postimg.cc/tCFSkKgc/photo-8-2025-06-06-09-39-30.jpg">
+        <img src="https://i.postimg.cc/L8TyKjLB/photo-14-2025-06-06-09-39-30.jpg">
+    </div>
+    </div>
+    </div>
+    <section>
+        <h2 class="hed2">محصولات</h2>
+    </section>
+    <div class="products">
+        <div class="pricing">
+            <img src="https://i.postimg.cc/63SjbwRk/photo-4-2025-06-06-09-39-30.jpg">
+            <p>شامپوی ضد ریزش مو</p>
+            <h4>قیمت 10.000 تومان</h4>
+        </div>
+        <div class="pricing">
+            <img src="https://i.postimg.cc/dVmfsbPC/photo-2-2025-06-06-09-39-30.jpg">
+            <p>شامپوی ضد ریزش مو</p>
+            <h4>قیمت 10.000 تومان</h4>
+        </div>
+        <div class="pricing">
+            <img src="https://i.postimg.cc/QtVYqVBg/photo-5-2025-06-06-09-39-30.jpg">
+            <p>شامپوی ضد ریزش مو</p>
+            <h4>قیمت 10.000 تومان</h4>
+        </div>
+        <div class="pricing">
+            <img src="https://i.postimg.cc/tCFSkKgc/photo-8-2025-06-06-09-39-30.jpg">
+            <p>شامپوی ضد ریزش مو</p>
+            <h4>قیمت 10.000 تومان</h4>
+        </div>
+        <div class="pricing">
+            <img src="https://i.postimg.cc/L8TyKjLB/photo-14-2025-06-06-09-39-30.jpg">
+            <p>شامپوی ضد ریزش مو</p>
+            <h4>قیمت 10.000 تومان</h4>
+        </div>
+        <div class="pricing">
+            <img src="https://i.postimg.cc/W4YXtj9d/photo-1-2025-06-06-09-39-30.jpg">
+            <p>شامپوی ضد ریزش مو</p>
+            <h4>قیمت 10.000 تومان</h4>
+        </div>
+        <div class="pricing">
+            <img src="https://i.postimg.cc/Y948WVVb/photo-6-2025-06-06-09-39-30.jpg">
+            <p>شامپوی ضد ریزش مو</p>
+            <h4>قیمت 10.000 تومان</h4>
+        </div>
+        <div class="pricing">
+            <img src="https://i.postimg.cc/W486qSth/photo-10-2025-06-06-09-39-30.jpg">
+            <p>شامپوی ضد ریزش مو</p>
+            <h4>قیمت 10.000 تومان</h4>
+        </div>
+        <div class="pricing">
+            <img src="https://i.postimg.cc/h4z3zzRc/photo-15-2025-06-06-09-39-30.jpg">
+            <p>شامپوی ضد ریزش مو</p>
+            <h4>قیمت 10.000 تومان</h4>
+        </div>
+        <div class="pricing">
+            <img src="https://i.postimg.cc/sfqfz63R/photo-21-2025-06-06-09-39-30.jpg">
+            <p>شامپوی ضد ریزش مو</p>
+            <h4>قیمت 10.000 تومان</h4>
+        </div>
+    </div>
+    <div>
+        <span style="border:1px solid white;position: relative;bottom: 1rem;"></span>
+        <p style="align-self: center;position:relative;bottom: .8rem; color: rgb(12, 12, 12);">.تمامی حقوق برای وبسایت تورچان محفوظ است :</p>
+    </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const nav = document.querySelector(".nav");
+  const wrapper = document.querySelector(".nav-wrapper");
+
+  if (!nav || !wrapper) return;
+
+  // عکس‌ها رو دوتا پشت سر هم می‌چینیم
+  const clone = nav.cloneNode(true);
+  wrapper.appendChild(clone);
+
+  // بعد از اینکه صفحه کامل لود شد، انیمیشن رو تنظیم می‌کنیم
+  window.addEventListener("load", () => {
+    const totalScrollWidth = wrapper.scrollWidth / 2; // فقط نصفش تا حالت بی‌نقص بشه
+    const speed = 80; // سرعت بر حسب پیکسل بر ثانیه
+    const duration = totalScrollWidth / speed;
+
+    // ست کردن انیمیشن با مدت درست
+    wrapper.style.animation = slide ${duration}s linear infinite;
+  });
+});
+let isUserScrolling = false;
+let resumeTimeout;
+
+const container = document.querySelector(".scroll-container");
+const slider = document.querySelector(".nav");
+
+// وقتی کاربر اسکرول کرد
+container.addEventListener("scroll", () => {
+  if (!isUserScrolling) {
+    isUserScrolling = true;
+    slider.style.animationPlayState = "paused";
+  }
+
+  clearTimeout(resumeTimeout);
+  resumeTimeout = setTimeout(() => {
+    isUserScrolling = false;
+    slider.style.animationPlayState = "running";
+  }, 1500); // بعد از ۱.۵ ثانیه بی‌حرکتی دوباره ادامه بده
+});
+</script>
+</body>
+</html>

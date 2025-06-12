@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css" rel="stylesheet" type="text/css">
+  <title>نمونه کار</title>
+</head>
+<style>
+    body {
+      font-family: Vazir, sans-serif;
+      background: linear-gradient(90deg, #052750, #093c7a, #052750);
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+        .back{
+        display: flex;
+        font-size: .8rem;
+        color: greenyellow;
+        text-decoration: none;
+        direction: rtl;
+        position: relative;left: 6rem;top: 1rem;
+    }
+    .back::after{
+        content: "🏠";
+    }
+    .back::before{
+        content:"↪️";
+    }
+    .logo{
+      width: 40px;
+      position: absolute;top: 4.5rem;left: 7rem;
+      transform: rotate(10deg);
+    }
+    .rainbow-text {
+      font-size: 1.5rem;
+      font-weight: bold;
+      background: linear-gradient(270deg, #ff00cc, #3333ff, #00ffcc, #ffcc00, #ff0033);
+      background-size: 800% 800%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: rainbow 6s ease infinite;
+      text-align: center;
+      white-space: nowrap;
+      position: relative;
+      border-bottom: 1px solid white;
+      padding-bottom: 1rem;
+      width: 300px;
+      filter: drop-shadow(2px 2px 2px black);
+    }
+    @keyframes rainbow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .portfolio-container {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        margin-top: 40px;
+        width: 100%;
+        max-width: 600px;
+    }
+    .portfolio-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+    }
+    .description-box {
+        background-color: white;
+        color: black;
+        padding: 15px 20px;
+        border-radius: 10px;
+        width: 250px;
+        direction: rtl;
+        margin-right: 20px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        filter: drop-shadow(2px 2px 2px black);
+        transition: all 0.3s ease ;
+    }
+    .description-box:hover{
+
+      transform: scale(1.02);
+    }
+
+    .description-box h4 {
+        margin: 0 0 10px 0;
+        color: #052750;
+    }
+
+    .description-box p {
+        margin: 0;
+        font-size: 0.9rem;
+        color: #333;
+    }
+    .image-wrapper {
+      display: flex;
+      padding: 3px;
+      border-radius: 12px;
+      background: linear-gradient(270deg, rgb(6, 180, 137), rgb(195, 0, 255), rgb(0, 0, 0), rgb(255, 0, 212));
+      background-size: 800% 800%;
+      animation: borderAnimation 8s ease infinite;
+      filter: drop-shadow(2px 2px 2px rgb(0, 0, 0));
+      transition: all .3s ease-in;
+    }
+    .image-wrapper:hover{
+      transform: translateY(-8px);
+    }
+    @keyframes borderAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .image-wrapper img {
+      display: block;
+      border-radius: 8px;
+    }
+    .portfolio-item:nth-child(odd){
+      justify-content: flex-start;
+      flex-direction: row-reverse;
+    }
+    .portfolio-item:nth-child(odd) .description-box{
+      margin-right: 0;
+      margin-left: 20px;
+    }
+</style>
+<body>
+  <a class="back" href="index.html">بازگشت به خانه</a>
+  <div>
+    <img src="https://i.postimg.cc/RFPY912s/barber1-4-removebg-preview-1.png" alt="heder logo" class="logo">
+    <h2 class="rainbow-text">نمونه کار</h2>
+  </div>
+  <main class="portfolio-container">
+
+    <div class="portfolio-item">
+      <div class="description-box">
+        <h4>مدل موی کلاسیک</h4>
+        <p>یک مدل موی شیک و زیبا که هیچوقت از مد نمی‌افتد.</p>
+      </div>
+      <div class="image-wrapper">
+        <img src="https://i.postimg.cc/qRYvQmLm/photo-24-2025-06-06-09-39-30.jpg" alt="عکس" width="150">
+      </div>
+    </div>
+    <div class="portfolio-item">
+      <div class="description-box">
+        <h4>مدل موی مدرن</h4>
+        <p>مناسب برای جوانان و استایل‌های به‌روز.</p>
+      </div>
+      <div class="image-wrapper">
+        <img src="https://i.postimg.cc/k4D5Qrx6/photo-25-2025-06-06-09-39-30.jpg" alt="عکس" width="150">
+      </div>
+    </div>
+    <div class="portfolio-item">
+      <div class="description-box">
+        <h4>مدل فید (Fade)</h4>
+        <p>یکی از محبوب‌ترین مدل‌ها در سال‌های اخیر.</p>
+      </div>
+      <div class="image-wrapper">
+        <img src="https://i.postimg.cc/4xTnrSTq/photo-22-2025-06-06-09-39-30.jpg" alt="عکس" width="150">
+      </div>
+    </div>
+    <div class="portfolio-item">
+      <div class="description-box">
+        <h4> مدل کرو کات  (Crow Cut)</h4>
+        <p>یکی از محبوب‌ترین مدل‌ها در سال‌های اخیر.</p>
+      </div>
+      <div class="image-wrapper">
+        <img src="https://i.postimg.cc/pTFSyWqz/photo-17-2025-06-06-09-39-30.jpg" alt="عکس" width="150">
+      </div>
+    </div>
+    <div class="portfolio-item">
+      <div class="description-box">
+        <h4>مدل اسپایکی (Spikey)</h4>
+        <p>یکی از محبوب‌ترین مدل‌ها در سال‌های اخیر</p>
+      </div>
+      <div class="image-wrapper">
+        <img src="https://i.postimg.cc/YSymSgSD/images.jpg" alt="عکس" width="150">
+      </div>
+    </div>
+  </main>
+</body>
+</html>
