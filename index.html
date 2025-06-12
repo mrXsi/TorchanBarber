@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0">
+    <link rel="webcite icon" href="https://i.postimg.cc/4NgmsbRk/barber1-2.jpg" type="png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css" rel="stylesheet" type="text/css">
+    <title>TorchanBarber</title>
+</head>
+<style>
+    @media screen and (max-width: 430px){
+         body{
+        background:linear-gradient(90deg,#052750,#093c7a,#052750); 
+        color: rgb(0, 0, 0);
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+        font-family: Vazir, sans-serif;
+    }
+    div{
+        display: flex;
+        flex-direction: column;
+    }
+    .navbar{
+        position: relative;top: 2rem;
+        background-image: url(https://i.postimg.cc/nLCL03B7/32.jpg);
+        z-index: 8;
+        max-height: 6rem;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: 30% 50%;
+        background-size: cover;
+    }
+    body.light .par5{
+        color: white;
+    }
+    body .section{
+        background:linear-gradient(90deg,rgb(255, 255, 255) , rgb(255, 255, 255),rgb(255, 255, 255))
+    }
+    body .section a{
+        color: rgb(0, 0, 0);
+    }
+    body.light .section a{
+        color: rgb(0, 0, 0);
+    }
+    body .par4,body .par2{
+        color: white;
+    }
+    body.light {
+        background:linear-gradient(90deg,rgb(0,0,0),rgb(0,0,0));
+        color: rgb(255, 255, 255);
+    }
+    body.light .hed1-style, body.light .hed2-style, body.light .hed4-style {
+        color: rgb(255, 255, 255);
+    }
+    body.light .section{
+        background:linear-gradient(90deg,#ffffff,#ffffff,#ffffff); 
+    }
+    .hed1-style{
+        position: relative;bottom: 2.5rem;left: 1rem;
+        align-self: center;
+        z-index: 10;
+        font-size: 1.3rem;
+    } 
+    .barber{
+        width:30px ;
+        position: relative;left: 6.2rem;top: .5rem;
+        z-index: 9;
+    }
+    .lof1{
+    color: rgb(0, 0, 0);
+    }
+    .lof2{
+    color: rgb(102, 241, 102);
+    }
+    .div-style{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+        width: 350px;
+        max-width: 400px;
+        min-width: 120px;
+        height: 70px;
+        margin-top: .5rem;
+        margin-right: .5rem;
+        padding-top: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        gap: 1rem;
+        border-top: 1px solid white;
+    } 
+    .photo-style{
+        max-width: 40px;
+        position: relative;left: .5rem;
+    }
+    .link-shet{
+        position: relative;left: .4rem;
+        text-decoration: none;
+        color: aliceblue;
+        font-weight: bold;
+        font-size: 1rem;
+        align-items: center;
+        gap: 8px;
+        font-weight: bold;
+        font-size: .8rem;
+        display: inline;
+    }
+    .img1:hover{
+        filter: drop-shadow(0px 1px 3px rgb(0, 141, 0) );}
+    .img2:hover{
+        filter: drop-shadow(0px 1px 3px rgb(80, 185, 255));}
+    .img3:hover{
+        filter: drop-shadow(0px 1px 3px rgb(255, 255, 255));}                                      
+    .img4:hover{                                           
+        filter: drop-shadow(0px 1px 3px rgb(252, 5, 5));}
+    .a1{ color: rgb(102, 255, 0);}
+    .a2{ color: rgb(135, 221, 255);}
+    .a3{ color: rgb(255, 132, 87);}
+    .a4{  color: rgba(235, 48, 48, 0.8);}
+    body{
+        overflow-x: hidden;
+    }
+    .navbar{
+        max-width: 450px;
+        width: 380px;
+        position: relative;top: 0;
+        height: 3.5rem;
+        border-radius: 10px;
+    }
+    .hed3-style{
+        position: relative;left: 40%;
+        font-size: large;
+    }
+    .section{
+        max-width: 380px;
+        font-size: small;
+        border-radius: 15px;
+        position: relative;
+        background-color: rgb(255, 255, 255);
+        display: inline-flex;
+        flex-direction: row-reverse;
+        margin-top: 1rem;
+        gap: 1rem;
+        white-space: nowarp;
+        overflow-y: auto;
+        justify-self: unset;
+        padding-right: 10px;
+        overflow-x: hidden;
+        margin-left: 10px;
+        padding-left: 10px;
+    }
+    .section a{
+        color: rgb(0, 0, 0);
+
+        font-size: .7rem;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    .sec{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: .5rem;
+    }
+    .sec1{
+        margin-right: 4px;
+    }
+    .img-style .par2{
+        position: relative;top: 10px;
+        font-family: 'Vazir'sans-serif;
+        font-weight: bold;
+        font-size:1rem;
+        align-self: center;
+        color: rgb(255, 255, 255);
+
+    }
+    .par2::before{
+        content: "🔰";
+    }
+    .par5{
+        position: relative;top:5px ;
+        align-self: center;
+        color: rgba(0, 0, 0,.5);
+    }
+    .par5::after{
+        position: relative;bottom: 2px;
+        content: "⚜";
+        margin-left: 5px;
+        color: rgb(229, 255, 0);
+    }
+    .img-style{
+        position: relative;bottom: .5rem;
+        margin-left: 30px;
+        max-width: 320px;
+        border-radius: 5px;
+        border-top: 10px;
+    }
+    .par4{
+        height: 40px;
+        position: relative;bottom: 2rem;
+        align-self: center;
+        font: initial;
+        font-size:1.2rem;
+    }
+    .par4::before{
+        position: relative;right: 2rem;top: 2.8rem;
+        content: "🧵"; 
+    }
+    .hed2-style{
+        align-self: center;
+        font-size: 1.4rem;
+        filter: drop-shadow(0px 2px 3px rgb(0, 0, 0));
+        color: rgb(255, 255, 255);
+    }
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap:10px;
+        max-width: 300px; 
+        margin: auto;
+        flex-direction: row;
+    }
+    .products{
+       width: 48%; 
+    }
+    .products img {
+        height: 200px;
+        width: 100%;
+        display: block;
+        border-radius: 8px;
+        border:1px solid rgba(255, 255, 255,0.4) ;
+        filter: drop-shadow(0px 2px 5px rgb(0, 0, 0));
+        transition: all 0.5s;
+    }
+    .products img:hover{
+        border: 1px solid rgb(0, 0, 0);
+        filter: drop-shadow(0px 2px 4px rgb(0, 0, 0));
+        transform:translateY(-15px) ;
+    }
+    .hed4-style{
+        color: rgb(255, 255, 255);
+        font-family: 'Vazir'sans-serif;
+        letter-spacing: 1px;
+        font-size: .9rem;
+        width: 60px;
+        position: relative;left:2rem ;bottom: .5rem;
+        transition: all 0.3s ease-in ;
+        padding-bottom: .5rem;
+        padding-left: 1.9rem;
+        padding-right: 1rem;
+        border-left: 1px solid rgb(0, 255, 0);
+        border-right: 1px solid rgb(0, 255, 0);
+        filter: drop-shadow(1px 2px rgb(0, 0, 0));
+        border-radius: 30px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    .hed4-style:hover{
+        transform: translateY(10px);
+    }
+    @font-face {
+        font-family: 'Vazir';
+        src: url('fonts/Vazir.woff') format('woff');
+    }    
+    @keyframes up-galery {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .gallery {
+        animation: up-galery 0.8s ease forwards;
+    }
+    @keyframes produ {
+        from{
+            opacity: 0;transform: translateX(15px);
+        }
+        to{
+            opacity: 1;transform: translateX(0px);
+        }
+    }
+    .hed2-style{
+        animation:produ 0.7s ease forwards;
+    }
+    .par6{
+        color: rgb(0, 255, 0);
+        text-align: center;
+        margin-left: 30px;
+    }
+    }
+</style>
+<body>
+    <audio id="clickSound" src="./sonds/sond.mp3"></audio>
+    <div class="navbar">
+        <button id="toggleTheme" style="position:fixed;top:1rem;left:1rem;z-index:999;padding:.5rem;border-radius: 25px;background-color: #093c7a;">🌓</button>
+        <img class="barber" src="https://i.postimg.cc/zBf6jR9P/barber1-3-removebg-preview.png" width="50px">
+        <h1 class="hed1-style"><span class="lof1">Torchan</span><span class="lof2"> Barber</span></h1>
+    </div>
+    <div class="sho">
+        <span class="par4"><p>با یک اصلاح  خوب , حال خوب بساز</p></span>
+    </div>
+    <div class="section">
+        <span class="sec sec1">
+           <a href="products.html">محصولات</a>
+           <img src="https://i.postimg.cc/zB282Gy0/photo-1-2025-06-01-11-53-44-removebg-preview.png" width="32px">
+        </span>
+        <span class="sec">
+            <a href="Sample work.html">نمونه کار</a>
+            <img src="https://i.postimg.cc/8CH1WHN8/photo-3-2025-06-01-11-53-44-removebg-preview.png" width="20px">
+        </span>
+        <span class="sec">
+            <a href="Certiflcate of credit.html">مدرک اعتبار</a>
+            <img src="https://i.postimg.cc/bJwqRtwZ/photo-4-2025-06-01-11-53-44-removebg-preview.png" width="25px">
+        </span>
+        <span class="sec">
+            <a href="#">پشتیبانی</a>
+            <img src="https://i.postimg.cc/G2yc4172/photo-1-2025-06-01-11-09-37-removebg-preview.png" width="20px">
+        </span>
+    </div>
+    <div>
+        <h2 class="hed2-style">خدمات ما</h2>
+    </div>
+    <div class="gallery">
+        <span class="products duc1">
+             <img src="https://i.postimg.cc/qRYvQmLm/photo-24-2025-06-06-09-39-30.jpg">
+             <p class="par6"><span style="color: rgb(255, 251, 0);"> نوع استایل : </span>فید</p>
+            <h4 class="hed4-style">قیمت 10.000 تومان</h4>
+        </span>
+        <span class="products duc2">
+             <img src="https://i.postimg.cc/4xTnrSTq/photo-22-2025-06-06-09-39-30.jpg">
+             <p class="par6"><span style="color: rgb(255, 251, 0);"> نوع استایل : </span>فید</p>
+            <h4 class="hed4-style">قیمت 20.000 تومان</h4>
+        </span>
+        <span class="products duc3">
+             <img src="https://i.postimg.cc/k4D5Qrx6/photo-25-2025-06-06-09-39-30.jpg">
+             <p class="par6"><span style="color: rgb(255, 251, 0);"> نوع استایل : </span>فید</p>
+            <h4 class="hed4-style">قیمت 30.000 تومان</h4>
+        </span>
+        <span class="products duc4">
+             <img src="https://i.postimg.cc/qRYvQmLm/photo-24-2025-06-06-09-39-30.jpg">
+             <p class="par6"><span style="color: rgb(255, 251, 0);"> نوع استایل : </span>فید</p>
+            <h4 class="hed4-style">قیمت 40.000 تومان</h4>
+        </span>
+        <span class="products duc5">
+            <img src="https://i.postimg.cc/qRYvQmLm/photo-24-2025-06-06-09-39-30.jpg">
+            <p class="par6"><span style="color: rgb(255, 251, 0);"> نوع استایل : </span>فید</p>
+            <h4 class="hed4-style">قیمت 50.000 تومان</h4>
+        </span>
+        <span class="products duc6">
+            <img src="https://i.postimg.cc/qRYvQmLm/photo-24-2025-06-06-09-39-30.jpg">
+            <p class="par6"><span style="color: rgb(255, 251, 0);"> نوع استایل : </span>فید</p>
+            <h4 class="hed4-style">قیمت 60.000 تومان</h4>
+        </span>
+        <span class="products duc7">
+            <img src="https://i.postimg.cc/qRYvQmLm/photo-24-2025-06-06-09-39-30.jpg">
+            <p class="par6"><span style="color: rgb(255, 251, 0);"> نوع استایل : </span>فید</p>
+            <h4 class="hed4-style">قیمت 70.000 تومان</h4>
+        </span>
+        <span class="products duc8">
+            <img src="https://i.postimg.cc/qRYvQmLm/photo-24-2025-06-06-09-39-30.jpg">
+            <p class="par6"><span style="color: rgb(255, 251, 0);"> نوع استایل : </span>فید</p>
+            <h4 class="hed4-style">قیمت 80.000 تومان</h4>
+        </span>
+    </div>
+        <div class="div-style">
+        <span class="div1-style">
+            <a href="tel:+989021679682" class="link-shet a1">شماره تماس
+                <img src="https://i.postimg.cc/1XqFV0P1/photo-2-2025-05-29-16-47-05-removebg-preview.png" alt="call" class="photo-style img1" >
+            </a>
+        </span>
+        <span class="div2-style">
+            <a href="https://t.me/pubgvs2017" target="_blank" rel="noopener noreferrer"  class="link-shet a2">کانال تلگرام
+            <img src="https://i.postimg.cc/bN9JYB0x/photo-4-2025-05-29-22-17-32-removebg-preview.png" alt="telgram" class="photo-style img2">
+            </a>
+        </span>
+        <span class="div3-style">
+           <a href="mailto:pungvawm@gmail.com " target="_blank" rel="noopener noreferrer"class="link-shet a3">آدرس ایمیل
+           <img src="https://i.postimg.cc/ZKSnSSNY/photo-2-2025-05-29-22-25-20-removebg-preview.png" alt="email" class="photo-style img3">
+           </a>
+        </span>
+        <span class="div4-style">
+            <a href="https://www.google.com/maps/search/?api=1&query=37.475975,45.896827" target="_blank" rel="noopener noreferrer" class="link-shet a4">موقیت مکانی
+            <img src="https://i.postimg.cc/0QrDPRBQ/photo-1-2025-05-29-16-47-05-removebg-preview.png" alt="location" class="photo-style img4">
+            </a>
+        </span>
+    </div>
+    <div class="img-style">
+        <span class="par1"><p></p></span>
+        <span class="par2">آکادمی تورچان</span>
+        <p class="par5">.کلیه حقوق برای آکادمی تورچان محفوض است</p>
+        <span class="par3"><p></p></span>
+    </div>
+    <a href="tel:+989021679682" style="
+    position: fixed;
+    top: 11rem;
+    right: 1rem;
+    z-index: 1000;
+    background: white;
+    border-radius: 30px;
+    padding: .4rem .8rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    box-shadow: 0 0 8px rgba(0,0,0,0.3);
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: .9rem;
+    ">
+    <img src="https://i.postimg.cc/1XqFV0P1/photo-2-2025-05-29-16-47-05-removebg-preview.png" alt="call" width="24" height="24">
+        رزرو وقت
+    </a>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+          const clickSound = document.getElementById('clickSound');
+  document.querySelectorAll('a, button').forEach(el => {
+    el.addEventListener('click', () => {
+      clickSound.currentTime = 0;
+      clickSound.play();
+    });
+  });
+      document.getElementById("toggleTheme").onclick = function() {
+    document.body.classList.toggle("light");
+    };
+    </script>
+</body>
+</html>
