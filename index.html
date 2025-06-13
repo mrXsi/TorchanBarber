@@ -66,6 +66,7 @@
     .barber{
         width:30px ;
         position: relative;left: 6.2rem;top: .5rem;
+        padding-top: 5px;
         z-index: 9;
     }
     .lof1{
@@ -123,8 +124,7 @@
         overflow-x: hidden;
     }
     .navbar{
-        max-width: 450px;
-        width: 380px;
+        width: 100%;
         position: relative;top: 0;
         height: 3.5rem;
         border-radius: 10px;
@@ -198,33 +198,50 @@
         border-top: 10px;
     }
     .par4{
-        height: 40px;
-        position: relative;bottom: 2rem;
-        align-self: center;
-        font: initial;
+        width:80%;
+        display: flex;
+        align-items: center;
+        text-align: center;
         font-size:1.2rem;
+        background-color: rgba(255, 255, 255,0.1);
+        border-radius: 32px;
+        height: 30px;
+        padding-left: 3rem;
+        margin-left: 8px;
+        margin-top: 2px;
     }
     .par4::before{
-        position: relative;right: 2rem;top: 2.8rem;
         content: "🧵"; 
+        margin-right: 10px;
     }
     .hed2-style{
         align-self: center;
         font-size: 1.4rem;
         filter: drop-shadow(0px 2px 3px rgb(0, 0, 0));
         color: rgb(255, 255, 255);
+        background-color: rgba(0, 0, 0,0.2);
+        text-align: center;
+        width: 50%;
+        box-shadow: 2px 2px 2px black;
+        border-radius: 16px;
     }
     .gallery {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
         gap:10px;
         max-width: 300px; 
         margin: auto;
         flex-direction: row;
+        background-color: rgba(0, 0, 0, 0.4);
+        border-radius: 12px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 1rem;
     }
     .products{
        width: 48%; 
+       background-color: rgba(255, 255, 255,0.1);
+       border-radius: 16px;
     }
     .products img {
         height: 200px;
@@ -241,23 +258,15 @@
         transform:translateY(-15px) ;
     }
     .hed4-style{
+        display: flex;
         color: rgb(255, 255, 255);
-        font-family: 'Vazir'sans-serif;
-        letter-spacing: 1px;
         font-size: .9rem;
         width: 60px;
-        position: relative;left:2rem ;bottom: .5rem;
         transition: all 0.3s ease-in ;
-        padding-bottom: .5rem;
-        padding-left: 1.9rem;
-        padding-right: 1rem;
-        border-left: 1px solid rgb(0, 255, 0);
-        border-right: 1px solid rgb(0, 255, 0);
         filter: drop-shadow(1px 2px rgb(0, 0, 0));
-        border-radius: 30px;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
+        text-align: center;
+        align-items: center;
+        padding-left: 2.5rem;
     }
     .hed4-style:hover{
         transform: translateY(10px);
@@ -287,14 +296,13 @@
     .par6{
         color: rgb(0, 255, 0);
         text-align: center;
-        margin-left: 30px;
     }
     }
 </style>
 <body>
     <audio id="clickSound" src="./sonds/sond.mp3"></audio>
     <div class="navbar">
-        <button id="toggleTheme" style="position:fixed;top:1rem;left:1rem;z-index:999;padding:.5rem;border-radius: 25px;background-color: #093c7a;">🌓</button>
+        <button id="toggleTheme" style="position:fixed;top:1rem;left:1rem;z-index:999;padding:.5rem;border-radius: 25px;background-color: rgba(10, 34, 112,0.6);">🌓</button>
         <img class="barber" src="https://i.postimg.cc/zBf6jR9P/barber1-3-removebg-preview.png" width="50px">
         <h1 class="hed1-style"><span class="lof1">Torchan</span><span class="lof2"> Barber</span></h1>
     </div>
@@ -315,7 +323,7 @@
             <img src="https://i.postimg.cc/bJwqRtwZ/photo-4-2025-06-01-11-53-44-removebg-preview.png" width="25px">
         </span>
         <span class="sec">
-            <a href="#">پشتیبانی</a>
+            <a href="Support.html">پشتیبانی</a>
             <img src="https://i.postimg.cc/G2yc4172/photo-1-2025-06-01-11-09-37-removebg-preview.png" width="20px">
         </span>
     </div>
@@ -397,7 +405,7 @@
     top: 11rem;
     right: 1rem;
     z-index: 1000;
-    background: white;
+    background: rgba(255, 255, 255, 0.5);
     border-radius: 30px;
     padding: .4rem .8rem;
     display: flex;
