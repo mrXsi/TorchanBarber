@@ -1,23 +1,175 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css" rel="stylesheet" type="text/css">
-    <title>پشتیبانی</title>
-</head>
-<style>
-    body{
-        background:linear-gradient(90deg,#052750,#093c7a,#052750); 
-        font-family:Vazir,sans-serif;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>پشتیبانی</title>
+  <link href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
     }
-</style>
+    body {
+      margin: 0;
+      font-family: Vazir, sans-serif;
+      background: linear-gradient(135deg, #001f3f, #005580, #001f3f);
+      color: white;
+      overflow-x: hidden;
+    }
+    .back{
+        display: flex;
+        font-size: .8rem;
+        color: greenyellow;
+        text-decoration: none;
+        direction: rtl;
+        position: relative;top: 2rem;right: 2rem;
+    }
+    .back::after{
+        content: "🏠";
+    }
+    .back::before{
+        content:"↪️";
+    }
+    header {
+      text-align: center;
+      padding: 3rem 1rem 1rem;
+      font-size: 2rem;
+      position: relative;
+    }
+    .typingText {
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      color: #FFD700;
+      font-weight: bold;
+      height: 2.5rem;
+    }
+    .contact {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 1.5rem;
+      border-radius: 12px;
+      width: fit-content;
+      margin: 2rem auto;
+      transition: all 0.3s ease;
+    }
+    .contact:hover {
+      background: rgba(0, 0, 0, 0.5);
+      transform: scale(1.05);
+    }
+    .contact img {
+      width: 50px;
+      transition: transform 0.3s ease;
+    }
+    .contact:hover img {
+      transform: rotate(10deg);
+    }
+    .contact a {
+      color: cyan;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1rem;
+      margin: 3rem auto;
+      padding: 1rem;
+      max-width: 900px;
+      animation: fadeIn 2s ease;
+    }
+    .skill-box {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 1rem;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .skill-box:hover {
+      transform: translateY(-8px);
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+    .skill-box i {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: #00ffc3;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @media (max-width: 500px) {
+      .typingText {
+        font-size: 1.1rem;
+      }
+      .contact {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
 <body>
-    <div>
-
-
-        
+  <a class="back" href="index.html">بازگشت به خانه</a>
+  <header>
+    طراحی شده توسط
+    <div class="typingText" id="typeWriter"></div>
+  </header>
+  <div class="contact">
+    <a href="https://t.me/@RPD_NEXT" target="_blank">
+      <i class="fab fa-telegram fa-lg"></i> آیدی تلگرام
+    </a>
+    <img src="https://i.postimg.cc/bN9JYB0x/photo-4-2025-05-29-22-17-32-removebg-preview.png" alt="telegram">
+  </div>
+  <h2 style="display: flex;position: relative;left: 9.2rem; border-bottom: 2px solid;width: 120px;align-items: center;padding-left: 1rem;">مهارت ها </h2>
+  <section class="skills">
+    <div class="skill-box">
+      <i class="fa-brands fa-windows"></i>
+      <p>Visual Basic</p>
     </div>
+    <div class="skill-box">
+      <i class="fa-brands fa-js"></i>
+      <p>JavaScript</p>
+    </div>
+    <div class="skill-box">
+      <i class="fa-brands fa-python"></i>
+      <p>Python</p>
+    </div>
+    <div class="skill-box">
+      <i class="fa-brands fa-html5"></i>
+      <p>HTML</p>
+    </div>
+    <div class="skill-box">
+      <i class="fa-brands fa-css3-alt"></i>
+      <p>CSS</p>
+    </div>
+  </section>
+  <script>
+    const text = "مجتبی نعمتی";
+    const target = document.getElementById("typeWriter");
+    let index = 0;
+    function typeWriter() {
+      if (index < text.length) {
+        target.innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, 150);
+      } else {
+        setTimeout(() => {
+          target.innerHTML = "";
+          index = 0;
+          typeWriter();
+        }, 10000);
+      }
+    }
+    typeWriter();
+  </script>
 </body>
-</html>
 </html>
