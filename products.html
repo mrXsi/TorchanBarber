@@ -39,36 +39,40 @@
         content:"↪️";
     }
     .hed1{
+        display: flex;
         font-size: 1.4rem;
         color: white;
-        border-bottom: 1px solid white;
-        width: 150px;
-        padding-left: 10px;
-        align-self: center;
+        align-items: center;
+        justify-content: center;
         text-align: center;
         animation: hedline .5s ease forwards;
     }
     @keyframes hedline {
         0%{
-            opacity: 1;
-            transform: translateX(0);
+            opacity: 0;
+            transform: translateX(-20%);
         }
         100%{
             opacity: 1;
-            transform: translateX(110px);
+            transform: translateX(0);
         }
     }
     .scroll-container {
         width: 100%;
         direction: ltr;
         margin-top: 30px;
-        overflow-x: auto;
-        padding: 10px 0;
-        scrollbar-width: none;
-        -ms-perspective-origin-x: none;
+        padding: 10px 0; 
+        animation: scrolani 0.5s ease-in;
     }
-    .scroll-container::-webkit-scrollbar{
-        display: none;
+    @keyframes scrolani {
+        0%{
+            transform: translateX(-10%);
+            opacity: 0;
+        }
+        100%{
+            transform: translateY(0);
+            opacity: 1;
+        }
     }
     .nav{
         display: flex;
@@ -89,19 +93,21 @@
        transform: translateY(-10px)scale(1.1);
     }
     .hed2{
+        display: flex;
         margin-top: 20px;
         font-size: 1.2rem;
         color: rgb(217, 255, 0);
-        width: 100px;
+        justify-content: center;
         text-align: center;
+        align-items: center;
         animation: hed2line .5s ease forwards;
     }
     @keyframes hed2line {
         0%{
-            transform: translateX(0);
+            transform: translateX(-20%);
         }
         100%{
-            transform: translateX(140px);
+            transform: translateX(0);
         }
     }
     .products{
@@ -113,6 +119,15 @@
         margin: auto;
         flex-direction: row;
         margin-top: 20px;
+        animation: inds 0.5s ease-in forwards;
+    }
+    @keyframes inds {
+        0%{
+            transform: translateY(10%);
+        }
+        100%{
+            transform: translateY(0);
+        }
     }
     .pricing{
         width: calc(50% - 20PX);
@@ -133,16 +148,16 @@
     .pricing img:hover{
         border: 1px solid rgb(0, 0, 0);
         filter: drop-shadow(0px 2px 4px rgb(0, 0, 0));
-        animation: torn .5s ease-in forwards;
+        animation: torn .4s ease forwards;
     }
     @keyframes torn {
         0%{
             opacity: 1;
-            transform: rotateY(180deg)translateY(0px);
+            transform:translateY(0px) scale(1);
         }
         100%{
             opacity: 1;
-            transform: rotateY(360deg)translateY(-15px);
+            transform:translateY(-12px) scale(1.062);
         }
     }
     .pricing p{
@@ -163,7 +178,6 @@
     animation: scroll-left linear infinite;
     animation-duration: var(--duration, 50s);
 }
-
 @keyframes scroll-left {
     0% {
         transform: translateX(0);
@@ -255,46 +269,34 @@
         <span style="border:1px solid white;position: relative;bottom: 1rem;"></span>
         <p style="align-self: center;position:relative;bottom: .8rem; color: rgb(12, 12, 12);">.تمامی حقوق برای وبسایت تورچان محفوظ است :</p>
     </div>
-
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const nav = document.querySelector(".nav");
   const wrapper = document.querySelector(".nav-wrapper");
-
   if (!nav || !wrapper) return;
-
-  // عکس‌ها رو دوتا پشت سر هم می‌چینیم
   const clone = nav.cloneNode(true);
   wrapper.appendChild(clone);
-
-  // بعد از اینکه صفحه کامل لود شد، انیمیشن رو تنظیم می‌کنیم
   window.addEventListener("load", () => {
-    const totalScrollWidth = wrapper.scrollWidth / 2; // فقط نصفش تا حالت بی‌نقص بشه
-    const speed = 80; // سرعت بر حسب پیکسل بر ثانیه
+    const totalScrollWidth = wrapper.scrollWidth / 2;
+    const speed = 80; //
     const duration = totalScrollWidth / speed;
-
-    // ست کردن انیمیشن با مدت درست
     wrapper.style.animation = slide ${duration}s linear infinite;
   });
 });
 let isUserScrolling = false;
 let resumeTimeout;
-
 const container = document.querySelector(".scroll-container");
 const slider = document.querySelector(".nav");
-
-// وقتی کاربر اسکرول کرد
 container.addEventListener("scroll", () => {
   if (!isUserScrolling) {
     isUserScrolling = true;
     slider.style.animationPlayState = "paused";
   }
-
   clearTimeout(resumeTimeout);
   resumeTimeout = setTimeout(() => {
     isUserScrolling = false;
     slider.style.animationPlayState = "running";
-  }, 1500); // بعد از ۱.۵ ثانیه بی‌حرکتی دوباره ادامه بده
+  }, 1500);
 });
 </script>
 </body>
